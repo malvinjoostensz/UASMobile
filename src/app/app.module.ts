@@ -26,9 +26,9 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
     FormsModule,
     HttpClientModule,
     // kalo aplikasi nggak muncul coba buka environment ts abis itu refresh lagi
-    AngularFireModule.initializeApp(environment.firebaseApiKey),
+    // AngularFireModule.initializeApp(environment.firebaseApiKey)
     AngularFireStorageModule,
-    // AngularFireDatabaseModule
+    AngularFireDatabaseModule
   ],
   providers: [
     StatusBar,
