@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/homes"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <p class="ion-text-center" style="font-size: 25px">Log in</p>
+
+    <form #form="ngForm" (submit)="handleSubmit(form)">
+      <ion-item>
+        <ion-input
+                placeholder="Email"
+                name="email"
+                ngModel
+                required
+                type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+                placeholder="Password"
+                type="password"
+                ngModel
+                required
+                name="password"
+                #passwordField="ngModel"></ion-input>
+      </ion-item>
+
+      <ion-button
+              type="submit"
+              color="warning"
+              expand="block"
+              [disabled]="!form.valid">
+        Log In
+      </ion-button>
+    </form>
+
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <p style="font-size: 15px">
+            Don't have an account?
+            <a rel="noopener noreferrer" routerLink="/homes/signups">Sign Up</a>
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

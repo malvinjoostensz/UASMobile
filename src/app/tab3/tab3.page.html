@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Profile
+    </ion-title>
+    <!-- Kalau di refresh balik lagi ke tema awal -->
+    <ion-label slot="end">Theme</ion-label>
+    <ion-toggle slot="end" (ionChange)="onToggleColorTheme($event)">
+    </ion-toggle>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-grid style="margin-bottom: 50px">
+      <ion-col>
+        <ion-row>
+          <div class="ion-text-center" style="margin:auto">
+<!--            <ion-img src="https://cdn.discordapp.com/attachments/776261488541302808/788704507424276530/filename.jpg" class="iconImage"></ion-img>-->
+
+            <!-- Camera / profile picture -->
+            <ion-button size="small" (click)="getPicture('camera')">
+              <ion-icon name="camera" slot="start"></ion-icon>
+              <ion-label>Camera</ion-label>
+            </ion-button>
+            <ion-button size="small" (click)="getPicture('gallery')">
+              <ion-icon name="image" slot="start"></ion-icon>
+              <ion-label>Gallery</ion-label>
+            </ion-button>
+            <ion-button size="small" (click)="upload()">
+              <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+              <ion-label>Upload</ion-label>
+            </ion-button>
+
+            <input type="file" *ngIf="isDesktop" #filePicker (change)="onFileChoose($event)"/>
+
+            <ion-card *ngIf="photo">
+              <ion-card-content>
+                <img [src]="photo">
+              </ion-card-content>
+            </ion-card>
+            <h2>Malvin Joostensz</h2>
+            <h4>00000013612</h4>
+          </div>
+        </ion-row>
+
+        <div class="ion-text-center">
+          <ion-button
+                  routerLink="/homes"
+                  style="font-weight: bold"
+                  color="warning">
+            <ion-icon name="exit" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-grid>
+  </div>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light" href="https://facebook.com/joostenszmalvin/">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" href="https://youtube.com/vaserlatigo">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" href="https://www.instagram.com/vaserlatigo/">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" href="https://wa.me/6287878390409">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" href="https://discord.gg/GbcgGf27DU">
+        <ion-icon name="logo-discord"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

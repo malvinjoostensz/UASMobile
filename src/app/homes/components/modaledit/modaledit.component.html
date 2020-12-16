@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add Friend
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onClose()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-searchbar
+            color="warning"
+            placeholder="Add friends"
+            showCancelButton="focus"
+            cancelButtonText="Custom Cancel">
+    </ion-searchbar>
+
+<!--    <form #f="ngForm" (ngSubmit)="onSubmit(f)">-->
+<!--      <ion-list>-->
+<!--        <ion-item>-->
+<!--          <ion-label position="floating">Add friends</ion-label>-->
+<!--          <ion-input type="email" ngModel name="email"></ion-input>-->
+<!--        </ion-item>-->
+<!--      </ion-list>-->
+<!--      <ion-button type="submit" color="warning" expand="block">Save</ion-button>-->
+<!--    </form>-->
+
+  </ion-toolbar>
+</ion-content>

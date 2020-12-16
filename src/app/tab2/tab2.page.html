@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Maps
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div #map id="map"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="danger" expand="block">Check-in Location</ion-button>
+    <ion-button color="warning" slot="end" (click)="showCurrentLoc()">
+      <ion-icon name="locate"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
