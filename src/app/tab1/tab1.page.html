@@ -4,7 +4,7 @@
       Friend List
     </ion-title>
     <ion-buttons slot="primary">
-      <ion-button (click)="presentAdd()">
+      <ion-button routerLink="/tabs/tab1/form">
         <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -16,29 +16,25 @@
     <ion-searchbar
             color="warning"
             placeholder="Find your friends"
-            showCancelButton="focus"
             cancelButtonText="Custom Cancel">
     </ion-searchbar>
   </ion-toolbar>
+        <ion-list>
 
-  <!--  <ion-app>-->
-  <!--    <ion-header translucent>-->
-  <!--      <ion-toolbar>-->
-  <!--        <ion-title>Searchbar</ion-title>-->
-  <!--      </ion-toolbar>-->
-  <!--      <ion-toolbar>-->
-  <!--        <ion-searchbar></ion-searchbar>-->
-  <!--      </ion-toolbar>-->
-  <!--    </ion-header>-->
-  <!--    <ion-content fullscreen>-->
-  <!--      <ion-list>-->
-  <!--        <ion-item>Yehezkiel Gunawan</ion-item>-->
-  <!--        <ion-item>James Christian Wira</ion-item>-->
-  <!--        <ion-item>Steven Wijaya</ion-item>-->
-  <!--        <ion-item>Matthew Evans</ion-item>-->
-  <!--        <ion-item>Steve Manumpil</ion-item>-->
-  <!--        <ion-item>Patricia Dinda</ion-item>-->
-  <!--      </ion-list>-->
-  <!--    </ion-content>-->
-  <!--  </ion-app>-->
+          <!-- kalau ini aktif, tab1nya error -->
+          <!-- bagian create/add, delete, edit (tab1.page.ts sama tab1.service.ts) dihapus -->
+
+<!--          <ion-item *ngFor="let friend of tab1">-->
+<!--            <ion-label>{{friend.email}}</ion-label>-->
+<!--            <ion-button routerLink="/tabs/tab1/edit/{{friend.key}}">EDIT</ion-button>-->
+<!--            <ion-button (click)="delete($event, friend.key)">DELETE</ion-button>-->
+<!--          </ion-item>-->
+
+          <ion-item>YehezkielGunawan@gmail.com</ion-item>
+          <ion-item>JamesChristianWira@gmail.com</ion-item>
+          <ion-item>Steven Wijaya@gmail.com</ion-item>
+          <ion-item>MatthewEvans@gmail.com</ion-item>
+          <ion-item>SteveManumpil@gmail.com</ion-item>
+          <ion-item>PatriciaDinda@gmail.com</ion-item>
+        </ion-list>
 </ion-content>

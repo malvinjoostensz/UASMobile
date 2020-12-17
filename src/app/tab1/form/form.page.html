@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add Friend
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <ion-searchbar
+          color="warning"
+          placeholder="E-mail"
+          cancelButtonText="Custom Cancel">
+    <ion-input type="email" ngModel name="email"></ion-input>
+  </ion-searchbar>
+    <div class="ion-text-center">
+      <ion-button type="submit" color="warning">Save</ion-button>
+    </div>
+  </form>
+</ion-content>
